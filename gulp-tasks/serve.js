@@ -13,8 +13,7 @@ var argv = require('yargs')
 
 var paths = require('../gulp.config.json');
 
-var configApiFile = argv.config === '' ? '../' + paths.configFile + argv.env + '-constant' : '../' + paths.configFile + argv.config;
-var configApi = require(configApiFile);
+var configApiFile = argv.config === '' ? paths.configFile + argv.env + '-constant' : paths.configFile + argv.config;
 /**
  * Launch 2 servers
  * localhost:4000 for zimlet-iframe

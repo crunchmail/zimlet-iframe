@@ -4,7 +4,6 @@
     "cdn": "cdn/",
     "frontendDirectives": "src/components/frontend-directives/",
     "frontendAssets": "src/components/frontend-assets/",
-    "internalComponents": "src/app/internal_components/",
     "extLibsCss": [
         "./node_modules/normalize.css/normalize.css",
         "./src/components/angular-spinkit/build/angular-spinkit.min.css",
