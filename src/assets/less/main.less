@@ -1,0 +1,591 @@
+// ng-dialog direct import
+//@import "../../components/frontend-assets/less/ngdialog.less";
+@import (css) "../../../node_modules/ng-dialog/css/ngDialog.css";
+@import (css) "../../../node_modules/ng-dialog/css/ngDialog-theme-default.css";
+
+@import "../../components/frontend-assets/less/lib/colors.less";
+@import "../../components/frontend-assets/less/lib/mixins.less";
+
+@import "../../components/frontend-assets/less/artichaut-col.less";
+@import "../../components/frontend-assets/less/font.less";
+@import "../../components/frontend-assets/less/commons.less";
+@import "../../components/frontend-assets/less/layout.less";
+@import "../../components/frontend-assets/less/navigation.less";
+
+@import "../../components/frontend-assets/less/login.less";
+@import "../../components/frontend-assets/less/charts.less";
+@import "../../components/frontend-assets/less/dashboard.less";
+@import "../../components/frontend-assets/less/step-form.less";
+@import "../../components/frontend-assets/less/loader.less";
+@import "../../components/frontend-assets/less/user.less";
+@import "../../components/frontend-assets/less/animation.less";
+
+@import "../../components/frontend-assets/less/domains.less";
+@import "../../components/frontend-assets/less/organizations.less";
+@import "../../components/frontend-assets/less/applications.less";
+
+@import "../../components/frontend-assets/less/v-tabs.less";
+
+@import "../../components/frontend-assets/less/recipients.less";
+
+@import "../../components/frontend-assets/less/pager.less";
+
+@import "../../components/frontend-assets/less/debug.less";
+
+@import "../../components/frontend-assets/less/preview.less";
+@import "../../components/frontend-assets/less/messageModule.less";
+
+/* ==========================================================================
+Sommaire
+
+1 = Basic Style
+2 = Form
+3 = Layout
+4 = Stats
+5 = Menu
+6 = Notifications
+7 = Step Form
+8 = Pager
+9 = Zimlet
+10 = CSV
+11 = Template selection
+12 = Dashboard
+========================================================================== */
+
+/* ==========================================================================
+3 = Layout
+========================================================================== */
+
+.logo {
+    position: fixed;
+    top: 1em;
+    z-index: 11;
+    left: 2.5em;
+    width: 6em;
+    transition: all 0.5s ease;
+}
+
+.selector-language {
+    top: 1.8em;
+    right: 1em;
+    position: fixed;
+    z-index: 11;
+}
+
+/* ==========================================================================
+6 = Notifications
+========================================================================== */
+
+/* ==========================================================================
+9 = Zimlet
+========================================================================== */
+
+#dentifrice {
+    width: 92%;
+    z-index: -1;
+    margin-bottom: 2em;
+}
+
+.edit-btn-pos {
+    position: absolute;
+    right: 2.5em;
+    width: 10em;
+    top: 14em;
+    margin-top: -3.8em;
+    .btn {
+        display: block;
+        margin-bottom: 0.4em;
+        width: 100%;
+    }
+}
+
+.group-contact {
+    span {
+        &:before {
+            content: ", ";
+        }
+        &:first-child:before {
+            content: "";
+        }
+    }
+}
+
+.zcontact {
+    border-bottom: 1px solid #CCC;
+    padding: 0.5em;
+    user-select: none;
+    &:hover {
+        background: #EEE;
+        cursor: pointer;
+    }
+    &.selected-item:hover {
+        background: @blue;
+    }
+}
+
+.type-group {
+    .icomoon(before, "\e615", 0);
+}
+
+.contact-selected { background: @orange; }
+
+.tagged .listing-contact {
+    > div { display: none; }
+    .tagged-element { display: block; }
+}
+
+.all-contact,
+.copy-contact {
+    margin: 1.5em 0;
+}
+.copy-contact {
+    text-align: left;
+    td { padding: 0.3em 1em; }
+    .icon-td { font-size: 1.5em; }
+    .icon-alone { font-size: 1em; }
+    .width-td { text-align: center; }
+    .tr-select {
+        background: #999;
+        color: #FFF;
+    }
+}
+
+// .all-contact h3 {
+//     padding: 0.8em 0.5em 0;
+//     margin-bottom: 0.5em;
+//     text-align: left;
+//     font-size: 1.1em;
+// }
+//
+// .all-contact {
+//     text-align: center;
+//     margin-top: 0.5em;
+//     textarea {
+//         height: 15em;
+//         margin-bottom: 1.1em;
+//     }
+// }
+
+
+.action-buttons {
+    button { margin-right: 0.5em; }
+}
+
+.recipients-tree {
+    ul {
+        margin: 0;
+    }
+}
+
+.folder-recipient {
+    padding-left: 1.5em;
+    > ul > li {
+        padding: 0.5em;
+        border-bottom: 1px solid @xLightBlue;
+        border-left: 1px solid @xLightBlue;
+        border-right: 1px solid @xLightBlue;
+        cursor: pointer;
+        background: #FFF;
+        &:hover {
+            background: @xLightBlue;
+        }
+        &.is-selected {
+            background: @lightBlue;
+        }
+    }
+    .icon-add-circle-outline {
+        font-size: 1em;
+        float: right;
+    }
+}
+
+.recipient-dl-tree .key-recipient-tree {
+    &:after {
+        content: none;
+    }
+    position: relative;
+    .btn {
+        font-size: 0.8em;
+        position: absolute;
+        right: 1em;
+        padding: 0.2em 0.4em 0.1em;
+    }
+    .nbre {
+        position: absolute;
+        right: 5em;
+        font-size: 0.7em;
+        background-color: @blue;
+        color: #FFF;
+        text-align: center;
+        padding: 0.45em 0.6em;
+        border-radius: 90px;
+        min-width: 2.4em;
+    }
+    cursor: default;
+    &:hover {
+        background: #FFF;
+    }
+}
+
+.title-recipient-dl-tree {
+    margin-bottom: 0.5em;
+    font-size: 1em;
+}
+
+.key-recipient-tree {
+    cursor: pointer;
+    padding: 0.5em 3em 0.5em 1em;
+    position: relative;
+    border: 1px solid @xLightBlue;
+    margin-top: -1px;
+    background: #FFF;
+    .icon-folder {
+        font-size: 1.2em;
+        margin-right: 0.4em;
+        display: inline-block;
+        &.is-shared {
+            &:before {
+                content: "\e907";
+            }
+        }
+    }
+    // .is-shared {
+    //     .icomoon(after, "\e615", 0);
+    //     &:after {
+    //         position: absolute;
+    //         font-size: 1em;
+    //         color: #999;
+    //         right: 1em;
+    //         top: 0.7em;
+    //     }
+    // }
+    &:hover {
+        background: @xLightBlue;
+    }
+    &:after {
+        content: "›";
+        position: absolute;
+        top: 0.3em;
+        left: 0.2em;
+        font-size: 1.1em;
+        font-family: Verdana;
+    }
+    &.isActive {
+        background: @xLightBlue;
+        &:after {
+            transform: rotate(90deg);
+            transform-origin: 0.3em 0.8em;
+            top: 0.45em;
+        }
+    }
+    &:before {
+        padding-right: 0.3em;
+        font-size: 1.2em;
+        vertical-align: text-top;
+    }
+}
+
+.switch {
+    input {
+        position: absolute;
+        left: -9999px;
+        &:checked + label:before {
+            background: @blue;
+            margin-left: 2.4em;
+        }
+        &:checked + label:after {
+            content: "";
+        }
+        &:focus + label:before {
+            box-shadow: none;
+        }
+    }
+    input + label {
+        position: relative;
+        border: 1px solid #CCC;
+        border-radius: 20px;
+        width: 5em;
+        height: 2.5em;
+        transition: all 0.5s ease;
+        cursor: pointer;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0.1em;
+            left: 0.2em;
+            width: 2em;
+            height: 2em;
+            background: #CCC;
+            border-radius: 90px;
+            transition: all 0.5s ease;
+        }
+    }
+}
+
+.container-actions-recipients {
+    position: absolute;
+    top: 9em;
+    right: 3.4em;
+}
+
+.recipients-contact-grouped {
+    position: relative;
+    padding-left: 2.5em;
+    .btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0.5em;
+        font-size: 0.9em;
+    }
+}
+
+.recipients-contact-group-dl {
+    padding-right: 3em;
+    word-wrap: break-word;
+}
+
+.container-csv {
+    > .btn {
+        margin-bottom: 1.5em;
+    }
+}
+
+.container-switch-recipients {
+    margin: 0 0 1em;
+    > div {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.switch-recipients {
+    input + label {
+        width: 3em;
+        height: 1.5em;
+        &:before {
+            background: @blue;
+            width: 1em;
+            height: 1em;
+            top: 0.15em;
+        }
+    }
+    input {
+        &:checked + label:before {
+            margin-left: 1.4em;
+        }
+    }
+}
+
+cm-recipients-zimlet,
+cm-recipients-tree {
+    position: relative;
+    display: block;
+}
+
+.search-recipients-container {
+    margin-left: 50%;
+}
+
+.zimlet-tabs-menu {
+    width: 50%;
+    border-top: 1px solid #CCC;
+    v-tab {
+        padding: 0.7em 1em;
+        color: @blue;
+        outline: none;
+        border-bottom: 1px solid #CCC;
+        border-left: 1px solid #CCC;
+        &.is-active {
+            background: @blue;
+            color: #FFF;
+            outline: none;
+            border-color: @blue;
+            .nbre {
+                background: #FFF;
+                color: @blue;
+            }
+        }
+    }
+    .nbre {
+        float: right;
+        font-size: 0.7em;
+        background-color: @blue;
+        color: #FFF;
+        text-align: center;
+        padding: 0.45em 0.6em;
+        border-radius: 90px;
+        min-width: 2.4em;
+    }
+}
+
+.zimlet-tabs-content {
+    width: 50%;
+    .listing-contact {
+        height: 25em;
+        overflow: hidden;
+        &:hover {
+            overflow-y: scroll;
+        }
+        .nbre {
+            position: absolute;
+            right: 1em;
+            font-size: 0.7em;
+            background-color: @blue;
+            color: #FFF;
+            text-align: center;
+            padding: 0.45em 0.6em;
+            border-radius: 90px;
+            min-width: 2.4em;
+            top: 50%;
+            transform: translateY(-50%);
+            &:before {
+                content: "";
+            }
+        }
+    }
+    v-page {
+        border: 3px solid #FFF;
+    }
+    .is-active {
+        border-color: @blue;
+    }
+    .btn-add {
+        display: block;
+        font-size: 0.8em;
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+.show-tag-title {
+    font-size: 1em;
+    cursor: pointer;
+}
+
+
+
+input[type=checkbox]+.select-all:before {
+    border: 0;
+}
+
+input[type=checkbox]:focus+.select-all:before {
+    box-shadow: none;
+}
+
+input[type=checkbox]:checked+.select-all:after {
+    font-size: 1.2em;
+    left: 10px;
+    transform: translateY(-48%);
+    top: 50%;
+    color: @blue;
+    margin-top: 0;
+}
+
+.select-all {
+    padding: 0.5em;
+    cursor: pointer;
+    background: @lightBlue;
+}
+
+.tags {
+    li {
+        display: inline-block;
+        cursor: pointer;
+        margin-left: 0.3em;
+        padding: 0.4em 1em 0.4em 0.7em;
+        border-radius: 2px;
+        &:first-child { margin-left: 0; }
+        &:before {
+            vertical-align: middle;
+            margin-right: 0.2em;
+        }
+        &.tag-selected {
+            &:before {
+                color: #FFF;
+            }
+        }
+        label {
+            display: inline-block;
+            cursor: pointer;
+            padding-bottom: 0;
+        }
+        label:before {
+            content: none!important;
+        }
+        input[type=checkbox]:checked+label:after {
+            content: none;
+        }
+        input[type=checkbox]:checked+label {
+            color: #FFF;
+        }
+    }
+    .zimbracolor-1 {
+        &:hover { color: @blue; }
+        &:before { color: @blue; }
+        &.selected { background: @blue; }
+
+    }
+    .zimbracolor-2 {
+        &:hover { color: cyan; }
+        &:before { color: cyan; }
+        &.selected { background: cyan; }
+    }
+    .zimbracolor-3 {
+        &:hover { color: @green; }
+        &:before { color: @green; }
+        &.selected { background: @green; }
+    }
+    .zimbracolor-4 {
+        &:hover { color: purple; }
+        &:before { color: purple; }
+        &.selected { background: purple; }
+    }
+    .zimbracolor-5 {
+        &:hover { color: @red; }
+        &:before { color: @red; }
+        &.selected { background: @red; }
+    }
+    .zimbracolor-6 {
+        &:hover { color: @yellow; }
+        &:before { color: @yellow; }
+        &.selected { background: @yellow; }
+    }
+    .zimbracolor-7 {
+        &:hover { color: pink; }
+        &:before { color: pink; }
+        &.selected { background: pink; }
+    }
+    .zimbracolor-8 {
+        &:hover { color: grey; }
+        &:before { color: grey; }
+        &.selected { background: grey; }
+    }
+    .zimbracolor-9 {
+        &:hover { color: @orange; }
+        &:before { color: @orange; }
+        &.selected { background: @orange; }
+    }
+    .selected {
+        color: #FFF!important;
+        &:before { color: #FFF!important; }
+    }
+}
+
+
+cm-recipients-zimlet .titleAdvancedOptions {
+    position: absolute;
+    top: -2em;
+    right: 0;
+}
+
+.headerTable {
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+#editeur { height: 100%; }
+
+.createMessage {
+    margin-bottom: 1em;
+}

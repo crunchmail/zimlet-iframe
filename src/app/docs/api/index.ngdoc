@@ -1,0 +1,28 @@
+@ngdoc overview
+@name Docs Top
+@description
+
+# API documentation
+
+It is the code which is loaded on an iframe into a tabs in Webmail zimbra
+
+## Structure
+
+This application is separated in several modules. Every modules is an application feature.
+
+Go to https://github.com/crunchmail/frontend-assets to see assets structure and https://crunchmail.github.io/frontend-directives/ for directives structure.
+
+    /src
+    /app
+        /config
+        /docs
+        /init_module_files
+    /assets
+        /less
+    /components
+        /frontend-directives
+        /frontend-assets
+    /iframe_integration
+    /static
+
+After Munch installation (see https://crunchmail.github.io/munch-core/dev/), you can modify ```local-constant.js``` and change the apiUrl property.
