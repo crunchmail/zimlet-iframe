@@ -11,7 +11,7 @@ NG_DOCS={
       "type": "overview",
       "moduleName": "Docs Top",
       "shortDescription": "API documentation",
-      "keywords": "api apiurl application assets change code directives docs documentation feature github https iframe installation io js loaded local-constant modify modules munch overview property separated structure tabs top webmail zimbra"
+      "keywords": "8000 allow api apikey apiurl application appsettings assets betafeatures change code commit config dans debug debugprefix default directives docs documentation dsn env environment feature file fr git_commit github gulp http https iframe installation io javascript js lang loaded local-constant missing modify modules munch overview postmessage property raven release separated settings source src structure tabs tags task top translations true url urlediteur v1 var version webmail zimbra zimlet"
     },
     {
       "section": "api",

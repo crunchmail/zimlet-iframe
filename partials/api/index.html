@@ -20,4 +20,37 @@
 /iframe_integration
 /static
 </code></pre><p>After Munch installation (see <a href="https://crunchmail.github.io/munch-core/dev/">https://crunchmail.github.io/munch-core/dev/</a>), you can modify <code>local-constant.js</code> and change the apiUrl property.</p>
+<h4 id="config-file" id="api-documentation_structure_config-file">Config File</h4>
+<p>Dans <code>src/app/config/</code></p>
+<pre><code class="lang-javascript">var appSettings = {
+    // Api Settings
+    apiUrl : &#39;http://127.0.0.1.8000/&#39;,
+    version: &#39;v1&#39;,
+    apiKey: &quot;&quot;,
+    //Toothpaste url, use for iframe
+    urlEditeur: &#39;&#39;,
+    debug: true,
+    //Use for postMessage
+    source: &#39;Zimlet&#39;,
+    betaFeatures: true,
+    raven: {
+        dsn: &#39;&#39;
+    },
+    lang: {
+        default: &#39;fr&#39;,
+        // allow to see missing translations
+        debug: true,
+        // default is &quot;[MISSING]:&quot;
+        debugPrefix: &#39;¬ &#39;
+    },
+    //Replace in gulp task
+    config: {
+        release: &#39;VERSION&#39;,
+        tags: {
+            git_commit: &#39;COMMIT&#39;,
+            env: &#39;ENVIRONMENT&#39;
+        }
+    }
+};
+</code></pre>
 </div></div>
