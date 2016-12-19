@@ -26,3 +26,40 @@ Go to https://github.com/crunchmail/frontend-assets to see assets structure and 
     /static
 
 After Munch installation (see https://crunchmail.github.io/munch-core/dev/), you can modify ```local-constant.js``` and change the apiUrl property.
+
+### Config File
+
+In `src/app/config/`
+
+```javascript
+var appSettings = {
+    // Api Settings
+    apiUrl : 'http://127.0.0.1.8000/',
+    version: 'v1',
+    apiKey: "",
+    //Toothpaste url, use for iframe
+    urlEditeur: '',
+    debug: true,
+    //Use for postMessage
+    source: 'Zimlet',
+    betaFeatures: true,
+    raven: {
+        dsn: ''
+    },
+    lang: {
+        default: 'fr',
+        // allow to see missing translations
+        debug: true,
+        // default is "[MISSING]:"
+        debugPrefix: '¬ '
+    },
+    //Replace in gulp task
+    config: {
+        release: 'VERSION',
+        tags: {
+            git_commit: 'COMMIT',
+            env: 'ENVIRONMENT'
+        }
+    }
+};
+```
